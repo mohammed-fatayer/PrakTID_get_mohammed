@@ -10,13 +10,13 @@ class MainController extends GetxController {
     super.onInit();
   }
 
-  void changetheme() {
+  void changeTheme() {
     
     if (Get.isDarkMode) {
-      sharedpref!.setBool("theme", false);
+      sharedPreferences!.setBool("theme", false);
       Get.changeTheme(Themes.customLightTheme);
     } else {
-      sharedpref!.setBool("theme", true);
+      sharedPreferences!.setBool("theme", true);
       Get.changeTheme(Themes.customDarkTheme);
     }
   }

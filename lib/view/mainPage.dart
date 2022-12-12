@@ -3,14 +3,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:praktid_flutter/Localizations/localeController.dart';
-import 'package:praktid_flutter/controller/authcontroller.dart';
+import 'package:praktid_flutter/controller/authController.dart';
 import 'package:praktid_flutter/controller/mainController.dart';
 
-class Mainpage extends StatelessWidget {
-  Mainpage({super.key});
+class MainPage extends StatelessWidget {
+  MainPage({super.key});
   final MainController controller = Get.find();
-  final AuthController authcontroller = Get.find();
-  final LocaleController localcontroller = Get.find();
+  final AuthController authController = Get.find();
+  final LocaleController localController = Get.find();
   // final MainController controller = Get.find();
 
   @override
@@ -23,22 +23,22 @@ class Mainpage extends StatelessWidget {
             children: [
               ElevatedButton(
                   onPressed: () {
-                    authcontroller.signout();
+                    authController.signOut();
                   },
                   child: Text("sign out".tr)),
               ElevatedButton(
                   onPressed: () {
-                    localcontroller.changelang("en");
+                    localController.changelang("en");
                   },
                   child: Text("English".tr)),
               ElevatedButton(
                   onPressed: () {
-                    localcontroller.changelang("tr");
+                    localController.changelang("tr");
                   },
                   child: Text("Turkish".tr)),
               ElevatedButton(
                   onPressed: () {
-                    controller.changetheme();
+                    controller.changeTheme();
                   },
                   child: Text("theme".tr))
             ],

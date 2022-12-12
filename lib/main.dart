@@ -2,23 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:praktid_flutter/Localizations/local.dart';
 import 'package:praktid_flutter/Localizations/localeController.dart';
-import 'package:praktid_flutter/controller/authcontroller.dart';
+import 'package:praktid_flutter/controller/authController.dart';
 import 'package:praktid_flutter/theme/theme.dart';
 
 import 'package:praktid_flutter/view/login.dart';
-import 'package:praktid_flutter/view/mainpage.dart';
+import 'package:praktid_flutter/view/mainPage.dart';
 import 'package:praktid_flutter/view/register.dart';
-import 'package:praktid_flutter/utils/mybindings.dart';
+import 'package:praktid_flutter/utils/myBindings.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-SharedPreferences? sharedpref;
+SharedPreferences? sharedPreferences;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  sharedpref = await SharedPreferences.getInstance();
+  sharedPreferences = await SharedPreferences.getInstance();
 
   runApp(const MyApp());
 }
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     LocaleController controller = Get.put(LocaleController());
-    bool? theme = sharedpref!.getBool("theme");
+    bool? theme = sharedPreferences!.getBool("theme");
     return GetMaterialApp(
         title: 'PrakTID',
         locale: controller.initlanguage,
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
           ),
           GetPage(
             name: "/main",
-            page: () => Mainpage(),
+            page: () => MainPage(),
           ),
         ]);
   }

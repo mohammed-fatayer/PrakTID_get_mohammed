@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:praktid_flutter/controller/authcontroller.dart';
+import 'package:praktid_flutter/controller/authController.dart';
 import 'package:email_validator/email_validator.dart';
 
 
@@ -11,7 +11,7 @@ class RegisterPage extends StatelessWidget {
    RegisterPage({super.key});
 
   final AuthController controller = Get.find();
-  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 Form(
                   autovalidateMode: AutovalidateMode.always,
-                  key: _formkey,
+                  key: _formKey,
                   child: Column(
                     children: [
                       Container(
@@ -82,11 +82,11 @@ class RegisterPage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size.fromHeight(50),
                       ),
-                      child: const Text('sign up'),
+                      child: const Text('Sign up'),
                       onPressed: () async {
-                        var formdata = _formkey.currentState;
-                        if (formdata != null && formdata.validate()) {
-                          formdata.save();
+                        var formData = _formKey.currentState;
+                        if (formData != null && formData.validate()) {
+                          formData.save();
                           controller.register(
                           controller.email, controller.password);
                         }

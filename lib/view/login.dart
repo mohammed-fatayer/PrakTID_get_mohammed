@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
   final AuthController controller = Get.find();
-  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 Form(
                   autovalidateMode: AutovalidateMode.always,
-                  key: _formkey,
+                  key: _formKey,
                   child: Column(
                     children: [
                       Container(
@@ -82,9 +82,9 @@ class LoginPage extends StatelessWidget {
                       ),
                       child:  Text('sign in'.tr),
                       onPressed: () {
-                        var formdata = _formkey.currentState;
-                        if (formdata != null && formdata.validate()) {
-                          formdata.save();
+                        var formData = _formKey.currentState;
+                        if (formData != null && formData.validate()) {
+                          formData.save();
                           controller.login(
                               controller.email, controller.password);
                         }
@@ -107,9 +107,9 @@ class LoginPage extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        var formdata = _formkey.currentState;
-                        if (formdata != null && formdata.validate()) {
-                          formdata.save();   
+                        var formData = _formKey.currentState;
+                        if (formData != null && formData.validate()) {
+                          formData.save();
                         }
                         controller.resetpassword(controller.email);
                       },

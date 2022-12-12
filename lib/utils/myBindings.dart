@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:praktid_flutter/Localizations/localeController.dart';
-import 'package:praktid_flutter/controller/authcontroller.dart';
+import 'package:praktid_flutter/controller/authController.dart';
 
 import 'package:get/get.dart';
 import 'package:praktid_flutter/controller/mainController.dart';

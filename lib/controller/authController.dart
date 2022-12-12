@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:praktid_flutter/view/login.dart';
-import 'package:praktid_flutter/view/mainpage.dart';
+import 'package:praktid_flutter/view/mainPage.dart';
 
 class AuthController extends GetxController {
   String email = "";
@@ -21,13 +21,13 @@ class AuthController extends GetxController {
     // our user would be notified
     _user.bindStream(auth.userChanges());
     //if user login or logout he will be notified from firebase  using bindStream
-    // and function ever  taks listener and a fucntion and every time change happens ever function will  work
+    // and function ever  tasks listener and a function and every time change happens ever function will  work
     //notice that firebase auth always follow user current login state
-    ever(_user, _initalScreen);
+    ever(_user, _initialScreen);
   }
 
 // navigate to login or main page
-  void _initalScreen(User? user) {
+  void _initialScreen(User? user) {
     if (user != null && user.emailVerified == true) {
       Get.toNamed("/main");
     } else {
@@ -57,7 +57,7 @@ class AuthController extends GetxController {
       if (e.code == 'weak-password') {
         print('The password provided is too weak.');
         return Get.defaultDialog(
-          title: "Faild",
+          title: "Failed",
           middleText: "The password provided is too weak. ",
           textConfirm: "ok",
           onConfirm: () {
@@ -68,9 +68,9 @@ class AuthController extends GetxController {
       } else if (e.code == 'email-already-in-use') {
         print('The account already exists for that email.');
         return Get.defaultDialog(
-          title: "Faild",
+          title: "Failed",
           middleText: "The account already exists for that email.",
-          textConfirm: "ok",
+          textConfirm: "Ok",
           onConfirm: () {
             Get.back();
           },
@@ -87,7 +87,7 @@ class AuthController extends GetxController {
         await credential.user!.sendEmailVerification();
       }
     } catch (e) {
-      print("An error occured while trying to send email  verification");
+      print("An error occurred while trying to send email  verification");
       print(e);
     }
   }
@@ -101,7 +101,7 @@ class AuthController extends GetxController {
         Get.toNamed("/main");
       } else {
         return Get.defaultDialog(
-          title: "Faild to login",
+          title: "Failed to login",
           middleText:
               "email not verified please check your email and try again",
           textConfirm: "ok",
@@ -118,9 +118,9 @@ class AuthController extends GetxController {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
         return Get.defaultDialog(
-          title: "Faild",
+          title: "Failed",
           middleText: "No user found for that email.",
-          textConfirm: "ok",
+          textConfirm: "Ok",
           onConfirm: () {
             Get.back();
           },
@@ -128,9 +128,9 @@ class AuthController extends GetxController {
       } else if (e.code == 'wrong-password') {
         print('Wrong password provided for that user.');
         return Get.defaultDialog(
-          title: "Faild",
+          title: "Failed",
           middleText: "Wrong email or password ",
-          textConfirm: "ok",
+          textConfirm: "Ok",
           onConfirm: () {
             Get.back();
           },
@@ -139,8 +139,8 @@ class AuthController extends GetxController {
     }
   }
 
-  void resetpassword(String email) async {
-    String textvalue = email;
+  void resetPassword(String email) async {
+    String textValue = email;
     return Get.defaultDialog(
       title: "reset password",
       textConfirm: "Send email",
@@ -152,13 +152,13 @@ class AuthController extends GetxController {
         decoration: const InputDecoration(
             labelText: "enter your email", border: OutlineInputBorder()),
         onChanged: (text) {
-          textvalue = text;
+          textValue = text;
         },
       ),
       onCancel: () {},
       onConfirm: () async {
         try {
-          await auth.sendPasswordResetEmail(email: textvalue.trim());
+          await auth.sendPasswordResetEmail(email: textValue.trim());
           Get.back();
           return Get.defaultDialog(
             title: "success",
@@ -168,9 +168,9 @@ class AuthController extends GetxController {
           );
         } catch (e) {
           Get.defaultDialog(
-            title: "faild",
-            textCancel: "ok",
-            middleText: "there is no user record for this email",
+            title: "Failed",
+            textCancel: "Ok",
+            middleText: "There is no user record for this email",
             onCancel: () {},
           );
         }
@@ -178,7 +178,7 @@ class AuthController extends GetxController {
     );
   }
 
-  void signout() async {
+  void signOut() async {
     try {
       auth.signOut();
     } catch (e) {

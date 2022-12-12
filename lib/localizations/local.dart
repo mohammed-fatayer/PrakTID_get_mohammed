@@ -7,8 +7,7 @@ class MyLocale implements Translations {
         "tr": {
           "Login": "kayıt olmak",
           "Email": "eposta",
-          "Please enter a valid email":
-          "lütfen geçerli eposta adresini giriniz",
+          "Please enter a valid email": "lütfen geçerli eposta adresini giriniz",
           "Password": "Şifre",
           "sign in": "kayıt olmak",
           "Sign Up": "Üye olmak",
