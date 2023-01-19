@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
     bool? theme = sharedPreferences!.getBool("theme");
     return GetMaterialApp(
         title: 'PrakTID',
-        locale: controller.initlanguage,
+        locale: controller.initLanguage,
         fallbackLocale:const Locale("en"),
         translations: MyLocale(),
         initialBinding: MyBinding(),

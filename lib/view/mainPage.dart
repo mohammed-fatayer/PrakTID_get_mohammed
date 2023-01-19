@@ -28,12 +28,12 @@ class MainPage extends StatelessWidget {
                   child: Text("sign out".tr)),
               ElevatedButton(
                   onPressed: () {
-                    localController.changelang("en");
+                    localController.changeLang("en");
                   },
                   child: Text("English".tr)),
               ElevatedButton(
                   onPressed: () {
-                    localController.changelang("tr");
+                    localController.changeLang("tr");
                   },
                   child: Text("Turkish".tr)),
               ElevatedButton(

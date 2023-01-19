@@ -111,7 +111,7 @@ class LoginPage extends StatelessWidget {
                         if (formData != null && formData.validate()) {
                           formData.save();
                         }
-                        controller.resetpassword(controller.email);
+                        controller.resetPassword(controller.email);
                       },
                       child: Text(
                         'Forgot Password?'.tr,
