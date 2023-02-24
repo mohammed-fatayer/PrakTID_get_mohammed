@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:praktid_flutter/Localizations/local.dart';
 import 'package:praktid_flutter/Localizations/localeController.dart';
-import 'package:praktid_flutter/controller/authController.dart';
+import 'package:praktid_flutter/controller/authorizationController.dart';
 import 'package:praktid_flutter/theme/theme.dart';
 
 import 'package:praktid_flutter/view/login.dart';

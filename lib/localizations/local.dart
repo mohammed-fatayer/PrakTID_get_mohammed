@@ -5,15 +5,15 @@ class MyLocale implements Translations {
   Map<String, Map<String, String>> get keys => {
         "en": {},
         "tr": {
-          "Login": "kayıt olmak",
+          "Login": "Giriş yapın",
           "Email": "eposta",
           "Please enter a valid email": "lütfen geçerli eposta adresini giriniz",
           "Password": "Şifre",
-          "sign in": "kayıt olmak",
-          "Sign Up": "Üye olmak",
+          "Sign in": "Kayıt olun",
+          "Sign Up": "Üye olun",
           "Forgot Password?": "Parolanızı mı unuttunuz?",
-          "sign out": "oturumu Kapat",
-          "English": "ingilizce",
+          "Sign out": "Oturumu Kapat",
+          "English": "İngilizce",
           "Turkish": "Türkçe"
         },
       };

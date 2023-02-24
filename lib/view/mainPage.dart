@@ -1,15 +1,14 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:praktid_flutter/Localizations/localeController.dart';
-import 'package:praktid_flutter/controller/authController.dart';
+import 'package:praktid_flutter/controller/authorizationController.dart';
 import 'package:praktid_flutter/controller/mainController.dart';
 
 class MainPage extends StatelessWidget {
   MainPage({super.key});
   final MainController controller = Get.find();
-  final AuthController authController = Get.find();
+  final AuthorizationController authorizationController = Get.find();
   final LocaleController localController = Get.find();
   // final MainController controller = Get.find();
 
@@ -23,7 +22,7 @@ class MainPage extends StatelessWidget {
             children: [
               ElevatedButton(
                   onPressed: () {
-                    authController.signOut();
+                    authorizationController.signOut();
                   },
                   child: Text("sign out".tr)),
               ElevatedButton(

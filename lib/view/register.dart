@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:praktid_flutter/controller/authController.dart';
+import 'package:praktid_flutter/controller/authorizationController.dart';
 import 'package:email_validator/email_validator.dart';
 
 
@@ -10,7 +10,7 @@ import 'package:email_validator/email_validator.dart';
 class RegisterPage extends StatelessWidget {
    RegisterPage({super.key});
 
-  final AuthController controller = Get.find();
+  final AuthorizationController controller = Get.find();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
@@ -19,7 +19,7 @@ class RegisterPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Sign Up"),
         ),
-        body: GetBuilder<AuthController>(builder: (controller) {
+        body: GetBuilder<AuthorizationController>(builder: (controller) {
           return Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,

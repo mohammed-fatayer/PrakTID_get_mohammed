@@ -5,10 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
-import 'package:praktid_flutter/view/login.dart';
-import 'package:praktid_flutter/view/mainPage.dart';
 
-class AuthController extends GetxController {
+class AuthorizationController extends GetxController {
   String email = "";
   String password = "";
   FirebaseAuth auth = FirebaseAuth.instance;

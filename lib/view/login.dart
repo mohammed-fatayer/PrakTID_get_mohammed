@@ -1,6 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
-import 'package:praktid_flutter/controller/authcontroller.dart';
+import 'package:praktid_flutter/controller/authorizationController.dart';
 import 'package:praktid_flutter/view/register.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
-  final AuthController controller = Get.find();
+  final AuthorizationController authorizationController = Get.find();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
         appBar: AppBar(
           title:  Text("Login".tr),
         ),
-        body: GetBuilder<AuthController>(builder: (controller) {
+        body: GetBuilder<AuthorizationController>(builder: (controller) {
           return Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -80,7 +80,7 @@ class LoginPage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size.fromHeight(50),
                       ),
-                      child:  Text('sign in'.tr),
+                      child:  Text('Sign in'.tr),
                       onPressed: () {
                         var formData = _formKey.currentState;
                         if (formData != null && formData.validate()) {
