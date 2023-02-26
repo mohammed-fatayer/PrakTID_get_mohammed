@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:praktid_flutter/Localizations/localeController.dart';
-import 'package:praktid_flutter/controller/authorizationController.dart';
+import 'package:praktid/Localizations/localeController.dart';
+import 'package:praktid/controller/authorizationController.dart';
 
 import 'package:get/get.dart';
-import 'package:praktid_flutter/controller/mainController.dart';
+import 'package:praktid/controller/mainController.dart';
 
 class MyBinding extends Bindings {
   @override

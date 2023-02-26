@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:praktid_flutter/Localizations/local.dart';
-import 'package:praktid_flutter/Localizations/localeController.dart';
-import 'package:praktid_flutter/controller/authorizationController.dart';
-import 'package:praktid_flutter/theme/theme.dart';
+import 'package:praktid/Localizations/local.dart';
+import 'package:praktid/Localizations/localeController.dart';
+import 'package:praktid/controller/authorizationController.dart';
+import 'package:praktid/theme/theme.dart';
 
-import 'package:praktid_flutter/view/login.dart';
-import 'package:praktid_flutter/view/mainPage.dart';
-import 'package:praktid_flutter/view/register.dart';
-import 'package:praktid_flutter/utils/myBindings.dart';
+import 'package:praktid/view/login.dart';
+import 'package:praktid/view/mainPage.dart';
+import 'package:praktid/view/register.dart';
+import 'package:praktid/utils/myBindings.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:praktid/view/login.dart';
+import 'package:flutter/material.dart';
 
 SharedPreferences? sharedPreferences;
 

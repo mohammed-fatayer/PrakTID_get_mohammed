@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:praktid_flutter/Localizations/localeController.dart';
-import 'package:praktid_flutter/controller/authorizationController.dart';
-import 'package:praktid_flutter/controller/mainController.dart';
+import 'package:praktid/Localizations/localeController.dart';
+import 'package:praktid/controller/authorizationController.dart';
+import 'package:praktid/controller/mainController.dart';
 
 class MainPage extends StatelessWidget {
   MainPage({super.key});
@@ -15,9 +15,32 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        drawer: const Drawer(),
-        body: GetBuilder<MainController>(builder: (controller) {
+      appBar: AppBar(),
+      drawer: Drawer(
+        child: ListView(
+          children: const <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.green,
+              ),
+              child: Text(
+                'GeeksforGeeks',
+                style: TextStyle(
+                  color: Colors.green,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              title: Text('Item 1'),
+            ),
+            ListTile(
+              title: Text('Item 2'),
+            ),
+          ],
+        ),
+      ),
+      body: GetBuilder<MainController>(builder: (controller) {
           return Column(
             children: [
               ElevatedButton(
@@ -42,6 +65,12 @@ class MainPage extends StatelessWidget {
                   child: Text("theme".tr))
             ],
           );
-        }));
+        }),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: (){
+    },
+    ),
+    );
   }
 }

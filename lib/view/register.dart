@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:praktid_flutter/controller/authorizationController.dart';
+import 'package:praktid/controller/authorizationController.dart';
 import 'package:email_validator/email_validator.dart';
 
 

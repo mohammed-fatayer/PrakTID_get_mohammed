@@ -1,9 +1,11 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
-import 'package:praktid_flutter/controller/authorizationController.dart';
-import 'package:praktid_flutter/view/register.dart';
+import 'package:praktid/controller/authorizationController.dart';
+import 'package:praktid/view/register.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
+//import 'package:google_sign_in/google_sign_in.dart';
+
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:praktid_flutter/main.dart';
-import 'package:praktid_flutter/theme/theme.dart';
+import 'package:praktid/main.dart';
+import 'package:praktid/theme/theme.dart';
 
 class MainController extends GetxController {
   @override
