@@ -1,16 +1,27 @@
-# praktid_flutter
+Sign Language Learning App (Old Branch) - Flutter
 
-PrakTİD Pratik Türk İşaret Dili
+Welcome to the Sign Language Learning App, a previous branch of a project aimed at facilitating the learning of sign language through structured classes and interactive quizzes. Developed using Flutter, and GetX, and integrated with Firebase, this app provides users with an engaging and educational experience.
+App Overview
 
-## Getting Started
+This app was designed to empower users to learn sign language at their own pace through comprehensive classes and quizzes. While this branch represents an earlier stage of development, it lays the groundwork for an effective sign language learning platform.
+Key Features (Planned)
 
-This project is a starting point for a Flutter application.
+    Sign Language Classes: Access structured sign language classes, each focusing on specific gestures and expressions.
 
-A few resources to get you started if this is your first Flutter project:
+    Interactive Quizzes: Engage in quizzes related to the learned gestures to reinforce understanding.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    User Authentication: Secure user registration and authentication powered by Firebase.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    Progress Tracking: Track your learning progress by completing classes and quizzes.
+
+    Gesture Reference Library: Access a library of sign language gestures with detailed explanations.
+
+Technical Aspects
+
+    Flutter Framework: Developed using the Flutter framework for a cross-platform user experience.
+
+    GetX State Management: Utilizes the GetX package for efficient state management and reactive updates.
+
+    Firebase Integration: Integrates Firebase for user authentication, database management, and storage.
+
+    User-Friendly Interface: Designs an intuitive interface for easy navigation and effective learning.
